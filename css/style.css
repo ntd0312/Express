@@ -59,3 +59,34 @@ body {
 .tab.active {
   display: block;
 }
+
+.hidden {
+  display: none !important;
+}
+
+button {
+  margin: 10px 0;
+  padding: 5px 10px;
+  font-size: 1rem;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background: #f2f2f2;
+}

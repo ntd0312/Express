@@ -24,7 +24,41 @@
       </section>
       <section id="orders" class="tab">
         <h1>Đơn hàng</h1>
-        <p>Danh sách đơn hàng sẽ hiển thị tại đây.</p>
+        <button onclick="toggleSettings()">⚙️ Ẩn/Hiện</button>
+        <div id="settings" class="settings hidden">
+          <p>Chọn cột muốn ẩn:</p>
+          <form id="columnForm">
+            <!-- Danh sách checkbox sẽ được render bằng JS -->
+          </form>
+          <button onclick="applyColumnSettings()">Áp dụng</button>
+        </div>
+        <div class="table-wrapper">
+          <table id="ordersTable">
+            <thead>
+              <tr>
+                <th data-col="ma">Mã hệ thống</th>
+                <th data-col="ngay">Ngày đặt hàng</th>
+                <th data-col="trangthai">Trạng thái</th>
+                <th data-col="khachhang">Khách hàng</th>
+                <th data-col="diadiem">Địa điểm nhận hàng</th>
+                <th data-col="tendiadiem">Tên địa điểm</th>
+                <th data-col="ghichutaixe">Ghi chú (Tài xế)</th>
+                <th data-col="khoiluong">Tổng khối lượng (kg)</th>
+                <th data-col="thetich">Tổng thể tích (m3)</th>
+                <th data-col="quanhuyen">Quận/Huyện</th>
+                <th data-col="tinh">Tỉnh/Thành Phố</th>
+                <th data-col="diachigiaohang">Địa chỉ giao hàng</th>
+                <th data-col="loaihang">Loại hàng</th>
+                <th data-col="ghichu">Ghi chú</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>MHT001</td><td>2025-04-15</td><td>Đang xử lý</td><td>Nguyễn Văn A</td><td>Kho A</td><td>Chi nhánh 1</td><td>Lưu ý hàng dễ vỡ</td><td>120</td><td>3.5</td><td>Q.1</td><td>TP.HCM</td><td>123 Đường A</td><td>Thiết bị</td><td>-</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
     </main>
   </div>
