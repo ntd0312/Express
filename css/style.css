@@ -2,47 +2,53 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Inter', sans-serif;
 }
 
 body {
-  font-family: "Inter", sans-serif;
-  background-color: #f4f6f8;
+  background: #f0f2f5;
   color: #333;
 }
 
 .container {
   display: flex;
   height: 100vh;
+  overflow: hidden;
 }
 
 .sidebar {
+  background: #1f2937;
+  color: white;
   width: 220px;
-  background: #1e293b;
-  color: #fff;
   padding: 20px;
 }
 
 .sidebar h2 {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin-bottom: 24px;
 }
 
 .sidebar ul {
   list-style: none;
+  padding: 0;
 }
 
 .sidebar li {
-  margin: 10px 0;
+  margin-bottom: 12px;
 }
 
 .sidebar a {
-  color: #fff;
+  color: #ccc;
   text-decoration: none;
-  transition: 0.3s;
+  font-weight: 500;
+  display: block;
+  transition: color 0.3s;
 }
 
+.sidebar a.active,
 .sidebar a:hover {
-  text-decoration: underline;
+  color: #fff;
 }
 
 .content {
@@ -57,17 +63,51 @@ body {
 }
 
 .tab.active {
+  animation: fadein 0.5s;
   display: block;
 }
 
-.hidden {
-  display: none !important;
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-button {
-  margin: 10px 0;
-  padding: 5px 10px;
-  font-size: 1rem;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.setting-btn, .apply-btn {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.setting-btn:hover, .apply-btn:hover {
+  background-color: #2563eb;
+}
+
+.settings {
+  margin: 12px 0;
+  padding: 12px;
+  background: #f9fafb;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.hidden {
+  display: none;
+}
+
+.column-form label {
+  display: inline-block;
+  margin: 5px 15px 5px 0;
 }
 
 .table-wrapper {
@@ -78,15 +118,14 @@ button {
 table {
   width: 100%;
   border-collapse: collapse;
-  background: #fff;
 }
 
 th, td {
   border: 1px solid #ccc;
-  padding: 8px;
+  padding: 10px;
   text-align: left;
 }
 
 th {
-  background: #f2f2f2;
+  background: #f3f4f6;
 }

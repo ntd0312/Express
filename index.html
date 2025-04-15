@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dashboard - Express</title>
+  <title>Express Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <div class="container">
     <aside class="sidebar">
-      <h2>Express</h2>
+      <h2>📦 Express</h2>
       <nav>
         <ul>
-          <li><a href="#" onclick="showTab('overview')">Tổng quan</a></li>
+          <li><a href="#" onclick="showTab('overview')" class="active">Tổng quan</a></li>
           <li><a href="#" onclick="showTab('orders')">Đơn hàng</a></li>
         </ul>
       </nav>
@@ -20,17 +21,16 @@
     <main class="content">
       <section id="overview" class="tab active">
         <h1>Tổng quan</h1>
-        <p>Nội dung tổng quan hệ thống.</p>
+        <p>Chào mừng bạn đến với hệ thống Express Dashboard.</p>
       </section>
       <section id="orders" class="tab">
-        <h1>Đơn hàng</h1>
-        <button onclick="toggleSettings()">⚙️ Ẩn/Hiện</button>
+        <div class="header">
+          <h1>Đơn hàng</h1>
+          <button class="setting-btn" onclick="toggleSettings()">⚙️ Ẩn/Hiện Cột</button>
+        </div>
         <div id="settings" class="settings hidden">
-          <p>Chọn cột muốn ẩn:</p>
-          <form id="columnForm">
-            <!-- Danh sách checkbox sẽ được render bằng JS -->
-          </form>
-          <button onclick="applyColumnSettings()">Áp dụng</button>
+          <form id="columnForm" class="column-form"></form>
+          <button class="apply-btn" onclick="applyColumnSettings()">Áp dụng</button>
         </div>
         <div class="table-wrapper">
           <table id="ordersTable">
