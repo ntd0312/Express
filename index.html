@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - Express</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Express</h2>
+      <nav>
+        <ul>
+          <li><a href="#" onclick="showTab('overview')">Tổng quan</a></li>
+          <li><a href="#" onclick="showTab('orders')">Đơn hàng</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="content">
+      <section id="overview" class="tab active">
+        <h1>Tổng quan</h1>
+        <p>Nội dung tổng quan hệ thống.</p>
+      </section>
+      <section id="orders" class="tab">
+        <h1>Đơn hàng</h1>
+        <p>Danh sách đơn hàng sẽ hiển thị tại đây.</p>
+      </section>
+    </main>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
